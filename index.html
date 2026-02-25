@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourfront Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="bs-container">
+        <!-- Profile section -->
+        <div class="profile-stats-wrapper mb-3">
+          <div class="profile-card mb-3">
+            <div class="d-flex align-items-start gap-3">
+              <img
+                src="https://i.pravatar.cc/100?img=51"
+                alt="Michael"
+                class="profile-avatar flex-shrink-0"
+              />
+              <div>
+                <h2 class="profile-name">Michael</h2>
+                <p class="profile-msg mb-0">
+                  You've officially joined your first investment knowledge club!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats section -->
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="stat-card stat-pink">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img
+                    src="https://i.pravatar.cc/50?img=64"
+                    alt="Benard Makodingo"
+                    class="member-avatar"
+                    onerror="this.style.display = 'none'"
+                  />
+                  <span class="member-name">Benard Makodingo</span>
+                </div>
+                <p class="stat-number text-center">350</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stat-card stat-green">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img
+                    src="https://i.pravatar.cc/50?img=47"
+                    alt="kigSmall Foot"
+                    class="member-avatar"
+                    onerror="this.style.display = 'none'"
+                  />
+                  <span class="member-name">kigSmall Foot</span>
+                </div>
+                <p class="stat-number text-center">225</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stat-card stat-peach">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img
+                    src="https://i.pravatar.cc/50?img=49"
+                    alt="Caroline Likhoi"
+                    class="member-avatar"
+                    onerror="this.style.display = 'none'"
+                  />
+                  <span class="member-name">Caroline Likhoi</span>
+                </div>
+                <p class="stat-number text-center">117</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stat-card stat-pink">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img
+                    src="https://i.pravatar.cc/50?img=49"
+                    alt="Caroline Likhoi"
+                    class="member-avatar"
+                    onerror="this.style.display = 'none'"
+                  />
+                  <span class="member-name">Caroline Likhoi</span>
+                </div>
+                <p class="stat-number text-center">321</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendation section -->
+        <div class="recommendation-card my-3">
+          <h3 class="rec-heading">Now let's make you great!</h3>
+          <p class="rec-sub">
+            You have shown us where you are doing well and where we can support
+            you to be great!
+          </p>
+          <p class="rec-body">
+            From your profile we recommend these memberships. Pick on that fits
+            you best and start your financial adventure
+          </p>
+        </div>
+
+        <!-- Foundation Membership section -->
+        <div class="membership-card my-3" id="membership-foundation">
+          <button
+            class="membership-header foundation-header w-100"
+            type="button"
+            aria-expanded="true"
+            aria-controls="foundation-body"
+            onclick="toggleMembership('foundation')"
+          >
+            <h4 class="membership-title">
+              <span class="fw-bold">FOUNDATION</span>
+              <span class="fw-light">MEMBERSHIP</span>
+            </h4>
+          </button>
+          <div class="membership-body" id="foundation-body">
+            <p>
+              We invest for you, in shares and in the Mansa-X global fund.
+              Service is free online with your personal representative, but
+              service in the office may have extra charges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Economy Membership section -->
+        <div class="membership-card my-3" id="membership-economy">
+          <button
+            class="membership-header economy-header w-100"
+            type="button"
+            aria-expanded="true"
+            aria-controls="economy-body"
+            onclick="toggleMembership('economy')"
+          >
+            <h4 class="membership-title">
+              <span class="fw-bold">ECONOMY</span>
+              <span class="fw-light">MEMBERSHIP</span>
+            </h4>
+          </button>
+          <div class="membership-body" id="economy-body">
+            <p>
+              We will invest your money for you at a guaranteed rate with the
+              Mansa-X global fund. Service is free online with your personal
+              representative, but service in the office may have extra charges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Closer look section -->
+        <div class="my-4 text-center">
+          <a
+            href="#"
+            class="closer-look-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#membershipsModal"
+          >
+            A closer look at the memberships details is available here
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- The Footer -->
+    <footer class="bs-footer">
+      <p class="mb-0">Fourfront Management &copy; 2025, All Rights Reserved</p>
+    </footer>
+
+    <!-- WhatsApp section -->
+    <a
+      href="https://wa.me/"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Membership detail section -->
+    <div
+      class="modal fade"
+      id="membershipsModal"
+      tabindex="-1"
+      aria-labelledby="membershipsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bs-modal">
+          <div class="modal-header">
+            <h5 class="modal-title gold-text" id="membershipsModalLabel">
+              Membership Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6 class="fw-bold foundation-label">FOUNDATION MEMBERSHIP</h6>
+            <p>
+              We invest for you, in shares and in the Mansa-X global fund.
+              Service is free online with your personal representative, but
+              service in the office may have extra charges.
+            </p>
+            <hr class="modal-divider" />
+            <h6 class="fw-bold economy-label">ECONOMY MEMBERSHIP</h6>
+            <p>
+              We will invest your money for you at a guaranteed rate with the
+              Mansa-X global fund. Service is free online with your personal
+              representative, but service in the office may have extra charges.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn bs-btn-gold"
+              data-bs-dismiss="modal"
+            >
+              I'm Interested
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

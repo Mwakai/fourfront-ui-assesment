@@ -1,0 +1,392 @@
+:root {
+  --bs-bg: #3b3a38;
+  --bs-card: #4a4946;
+  --bs-gold: #c49a28;
+  --bs-gold-light: #d4a82a;
+  --bs-gold-text: #d4aa30;
+  --bs-foundation: #b98c26;
+  --bs-economy: #6b8fa3;
+  --bs-pink: #f0b8b8;
+  --bs-green: #b8d89e;
+  --bs-peach: #f0d0a0;
+  --bs-text: #ffffff;
+  --bs-muted: rgba(255, 255, 255, 0.65);
+  --bs-radius: 12px;
+  --bs-radius-sm: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf8f6;
+  color: var(--bs-text);
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Layout container */
+.bs-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+/* Profile + Stats wrapper */
+.profile-stats-wrapper {
+  background-color: #3b3a38;
+  border-radius: var(--bs-radius);
+  padding: 16px;
+}
+
+/* Profile card */
+.profile-card {
+  background-color: var(--bs-card);
+  border: 2px solid var(--bs-gold);
+  border-radius: var(--bs-radius);
+  padding: 22px 20px;
+}
+
+.profile-avatar {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  color: var(--bs-text);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 3rem;
+}
+
+.profile-msg {
+  color: var(--bs-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Stats card */
+.stat-card {
+  border-radius: var(--bs-radius-sm);
+  padding: 14px 14px 12px;
+  height: 100%;
+}
+
+.stat-pink {
+  background-color: var(--bs-pink);
+}
+.stat-green {
+  background-color: var(--bs-green);
+}
+.stat-peach {
+  background-color: var(--bs-peach);
+}
+
+.member-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.member-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #2c2a28;
+  line-height: 1.25;
+}
+
+.stat-number {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1e1c1a;
+  margin: 4px 0 0;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Recommendation card */
+.recommendation-card {
+  background-color: var(--bs-card);
+  border-radius: var(--bs-radius);
+  padding: 20px 20px 18px;
+}
+
+.rec-heading {
+  color: var(--bs-gold-text);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.rec-sub {
+  color: var(--bs-gold-text);
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.rec-body {
+  color: var(--bs-text);
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Membership card */
+.membership-card {
+  border-radius: var(--bs-radius);
+  overflow: hidden;
+}
+
+.membership-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: filter 0.2s;
+}
+
+.membership-header:hover {
+  filter: brightness(1.08);
+}
+
+.foundation-header {
+  background-color: var(--bs-foundation);
+}
+.economy-header {
+  background-color: var(--bs-economy);
+}
+
+.membership-title {
+  color: var(--bs-text);
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.toggle-icon {
+  color: var(--bs-text);
+  font-size: 1.15rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.membership-body {
+  background-color: var(--bs-card);
+  padding: 16px 20px;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    opacity 0.3s ease;
+  max-height: 300px;
+  opacity: 1;
+}
+
+.membership-body.collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+
+.membership-body p {
+  color: var(--bs-text);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.closer-look-btn {
+  display: block;
+  background-color: var(--bs-gold);
+  color: var(--bs-text);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: var(--bs-radius-sm);
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition:
+    background-color 0.2s,
+    transform 0.15s;
+}
+
+.closer-look-btn:hover {
+  background-color: var(--bs-gold-light);
+  color: var(--bs-text);
+  transform: translateY(-1px);
+}
+
+.closer-look-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.bs-footer {
+  background-color: var(--bs-gold);
+  color: var(--bs-text);
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* WhatsApp btn */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.7rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.whatsapp-fab:hover {
+  background-color: #1ebe5d;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Modals */
+.bs-modal {
+  background-color: #2e2d2b;
+  color: var(--bs-text);
+  border: 1px solid var(--bs-gold);
+  border-radius: var(--bs-radius);
+}
+
+.bs-modal .modal-header {
+  border-bottom: 1px solid rgba(196, 154, 40, 0.35);
+}
+
+.bs-modal .modal-footer {
+  border-top: 1px solid rgba(196, 154, 40, 0.35);
+}
+
+.gold-text {
+  color: var(--bs-gold-light) !important;
+}
+
+.foundation-label {
+  color: var(--bs-foundation);
+}
+
+.economy-label {
+  color: var(--bs-economy);
+}
+
+.modal-divider {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.bs-btn-gold {
+  background-color: var(--bs-gold);
+  border: none;
+  color: var(--bs-text);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.bs-btn-gold:hover {
+  background-color: var(--bs-gold-light);
+  color: var(--bs-text);
+}
+
+/* Responsive design */
+@media (min-width: 576px) {
+  .bs-container {
+    padding: 24px 24px 40px;
+  }
+
+  .profile-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-msg {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.4rem;
+  }
+
+  .member-name {
+    font-size: 0.87rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bs-container {
+    padding: 28px 32px 48px;
+  }
+
+  .rec-heading {
+    font-size: 1.35rem;
+  }
+
+  .membership-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .stat-number {
+    font-size: 1.7rem;
+  }
+
+  .member-name {
+    font-size: 0.75rem;
+  }
+
+  .member-avatar {
+    width: 34px;
+    height: 34px;
+  }
+}
